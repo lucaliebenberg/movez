@@ -15,3 +15,7 @@
 - eslint
 - eslint-config-next
 - @eslint/eslintrc
+
+## Start Guide Lines
+- NPM I
+- NPM RUN DEV
