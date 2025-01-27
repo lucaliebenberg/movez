@@ -1,4 +1,5 @@
 "use client";
+// setting component for client side
 import { useState } from "react";
 
 const LocationToggle = () => {
@@ -18,6 +19,7 @@ const LocationToggle = () => {
     }, 3000);
   }
 
+  // checking if data is logged
   console.log(isEnabled);
   console.log(timestamp);
 
