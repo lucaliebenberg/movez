@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import MovezLogo from "@/assets/Logo-Moves.svg";
-import Toggle from "@/components/ui/toggle";
+import LocationToggle from "@/components/ui/toggle";
 import Input from "@/components/ui/input";
 
 export default function Home() {
@@ -9,9 +9,9 @@ export default function Home() {
     <div className=" bg-[#059669] text-white">
       <div className="w-full h-full">
         <Navbar />
-        <div className="flex flex-col items-center w-full h-full p-5">
-          <div>
-            <Toggle />
+        <div className="flex flex-col items-center w-full gap-1 h-full px-5 pt-0 pb-5">
+          <div className="w-full">
+            <LocationToggle />
           </div>
           <div>
             <Input />
