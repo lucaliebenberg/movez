@@ -25,10 +25,10 @@ func main() {
     //         User: userStore,
     //     }
     //     userHandler = api.NewUserHandler(userStore)
-    //     authHandler = api.NewUserHandler(userStore)
+    var authHandler = api.NewUserHandler(userStore)
 
     //     app = fiber.New(config)
-    //     auth = app.Group("/api")
+    var auth = app.Group("/api")
     //     apiv1 = app.Group("/api/v1", api.JWTAuthentication(userStore))
     // )
 
@@ -36,7 +36,7 @@ func main() {
 
 
     // Auth Handlers
-    // auth.Post("/auth", authHandler.HandleAuthenticate)
+    auth.Post("/auth", authHandler.HandleAuthenticate)
 
     // User Handlers
 
