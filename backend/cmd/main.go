@@ -7,6 +7,8 @@ import (
 	"github.com/joho/godotenv"
 
 	"github.com/gofiber/fiber/v2"
+
+	"github.com/lucaliebenberg/movez/backend/api"
 )
 
 func main() {

@@ -1,4 +1,4 @@
-module movez.com
+module github.com/lucaliebenberg/movez
 
 go 1.21.3
 
