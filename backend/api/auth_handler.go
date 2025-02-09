@@ -1,6 +1,9 @@
 package api
 
-import "github.com/lucaliebenberg/movez/backend/types"
+import (
+	"github.com/lucaliebenberg/movez/backend/db"
+	"github.com/lucaliebenberg/movez/backend/types"
+)
 
 type AuthHandler struct {
 	userStore db.UserStore
@@ -16,7 +19,10 @@ type AuthReponse struct {
 	Token string      `json:"token"`
 }
 
-type genericResp struct {}
+type genericResp struct {
+	Type string `json:"status"`
+	Msg  string `json:"msg"`
+}
 
 func NewAuthHandler(userStore db.UserStore)*AuthHandler {
 	return &AuthHandler{
