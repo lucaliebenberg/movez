@@ -21,18 +21,19 @@ func main() {
 	app.Listen(":3000")
 
     // Handle initialization
-    // var (
-    //     userStore = db.NewSqlUserStore(client)
+    var (
+        userStore = db.NewSqlUserStore(client)
     //     store = &db.Store{
     //         User: userStore,
     //     }
     //     userHandler = api.NewUserHandler(userStore)
-    var authHandler = api.NewUserHandler(userStore)
+    // var authHandler = api.NewUserHandler(userStore)
+    authHandler = api.NewUserHandler(userStore)
 
     //     app = fiber.New(config)
-    var auth = app.Group("/api")
+    auth = app.Group("/api")
     //     apiv1 = app.Group("/api/v1", api.JWTAuthentication(userStore))
-    // )
+    )
 
     // Auth Handler
 

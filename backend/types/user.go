@@ -52,7 +52,7 @@ func isEmailValid(email string) bool {
 	return false
 }
 
-func isValidPassword(encpwd, pw string) bool {
+func IsValidPassword(encpwd, pw string) bool {
 	fmt.Println("Validating newly created user")
 	return bcrypt.CompareHashAndPassword([]byte(encpwd), []byte(pw)) == nil
 }
