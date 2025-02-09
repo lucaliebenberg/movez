@@ -46,7 +46,7 @@ func (h *AuthHandler) HandleAuthenticate(c *fiber.Ctx) error {
 
 	user, err := h.userStore.GetUserByEmail(c.Context(), params.Email)
 	if err != nil {
-		if errors.Is(err, sql.ErrNoResponse) {
+		if errors.Is(err, sql) {
 			return invalidCredentials(c)
 		}
 		return err

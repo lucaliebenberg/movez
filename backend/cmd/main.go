@@ -9,6 +9,8 @@ import (
 	"github.com/gofiber/fiber/v2"
 
 	"github.com/lucaliebenberg/movez/backend/api"
+
+	"github.com/lucaliebenberg/movez/backend/db"
 )
 
 func main() {
